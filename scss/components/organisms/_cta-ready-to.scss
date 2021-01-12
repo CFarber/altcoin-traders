@@ -1,9 +1,0 @@
-.cta-ready-to{
-    display: grid;
-    grid-template-rows: auto auto;
-    @include media-query('small') {
-    grid-gap: 2em;
-    }
-
-    background-image: linear-gradient(to left, rgba(93, 52, 255),  rgba(93, 52, 255, .75));
-  }
