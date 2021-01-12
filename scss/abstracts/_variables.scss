@@ -1,0 +1,61 @@
+//
+// Variables
+//
+
+//Colors
+
+$color-primary:   rgba(93, 52,255, 1);
+$color-secondary: rgba(28, 255,216, 1);
+
+$color-black: #000;
+$color-white: #fff;
+
+$color-darkerblue: #040608;
+$color-darkblue: #0A0E11;
+$color-mediumblue: #18A0FB;
+
+$color-darkgrey: #272E31;
+$color-mediumgrey: #959595;
+$color-lightgrey: #F2F2F2;
+
+$color-bg: $color-lightgrey;
+$color-border: #A3AAB1;
+$color-link: #0A1823;
+$color-link-active:  $color-lightgrey;
+$color-text: $color-darkblue;
+
+// Breakpoints
+
+$breakpoints: (
+  'x-large':      ( max-width: 1439.98px ),
+  'large':        ( max-width: 1199.98px ),
+  'medium':       ( max-width: 991.98px ),
+  'small-medium': ( max-width: 639.98px ),
+  'small':        ( max-width: 575.98px ),
+  'x-small':      ( max-width: 399.98px )
+) !default;
+
+// Gutters
+
+$gutters: (
+  'default':      36px,
+  'x-large':      36px,
+  'large':        32px,
+  'medium':       24px,
+  'small-medium': 20px,
+  'small':        20px,
+  'x-small':      16px
+) !default;
+
+// Spacer
+
+$spacer: 4px;
+
+// Grid 
+
+$grid-max-width: 1199.98px;
+$grid-outer-padding: 1em;
+
+// Border radius
+
+$bottom-border-radius: 0 0 16px 16px;

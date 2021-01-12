@@ -1,0 +1,58 @@
+.pricing{
+
+}
+
+.pricing-table{
+  padding: 1em 0;
+
+  &__heading{
+    padding: 1em 1.5em;
+    @include media-query('small') {
+        display: none !important;
+    }
+  }
+
+    &__table{
+      padding: 2em 1.5em;
+
+      display:grid;
+      grid-template-rows: auto;
+      grid-gap: 1em;
+      
+      border-radius: 15px;
+    }
+
+  
+    &__row{
+      display: grid;
+      grid-template-columns: 1fr 120px 120px;
+      grid-gap: 1em;
+      align-items: center;
+
+      @include media-query('small') {
+        grid-template-columns: 1fr 56px;
+
+        text-align: left;
+      }
+    }
+
+    &__footer{
+      padding: 1em 1.5em;
+      display: grid;
+      grid-template-columns: 240px 240px;
+      grid-gap: 1em;
+      align-items: center;
+      justify-content: flex-end;
+
+      @include media-query('small') {
+        grid-template-columns: 240px;
+        justify-content: center;
+      }
+    }
+
+    @include media-query('small') {
+      &__freemium{
+        display: none;
+      }
+    }
+}

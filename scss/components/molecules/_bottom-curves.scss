@@ -1,0 +1,77 @@
+.bottom-curves{
+  position: relative;
+  &::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 1em;
+
+    background-color: $color-black;
+    overflow: hidden;
+    z-index: 0;
+  }
+
+
+  &::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 1em;
+
+    background-color: $color-primary;
+    border-radius: $bottom-border-radius;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  &--white-black{
+    &::before{
+      background-color: $color-black;
+    }
+    &::after{
+      background-color: $color-white;
+    }
+  }
+
+  &--black-white{
+    &::before{
+      background-color: $color-white;
+    }
+    &::after{
+      background-color: $color-darkblue;
+    }
+  }
+
+  &--purple-black{
+    &::before{
+      background-color: $color-black;
+    }
+    &::after{
+      background-color: $color-primary;
+    }
+  }
+
+  &--black-purple{
+    &::before{
+      background-color: $color-black;
+    }
+    &::after{
+      background-color: $color-primary;
+    }
+  }
+
+  &--darkblue-darkgrey{
+    &::before{
+      background-color: $color-darkgrey;
+    }
+    &::after{
+      background-color: $color-darkblue;
+    }
+  }
+}

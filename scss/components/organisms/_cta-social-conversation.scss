@@ -1,0 +1,38 @@
+.cta-social-conversation{
+  min-height: 250px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  
+  background-color: $color-white;
+
+
+  &__nav{
+    margin: 1em 0 0;
+
+    ul{
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(4, auto);
+      grid-gap: 1em;
+      align-items: center;
+      justify-content: center;
+      @include media-query('small') {
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: auto;
+      }
+      li{
+        list-style-type: none;
+      }
+    }
+    img{
+      width: auto;
+      max-height: 44px;
+    }
+  }
+}

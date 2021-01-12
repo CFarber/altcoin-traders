@@ -1,0 +1,78 @@
+//
+// Utilities
+//
+
+// Text color 
+
+.text-color-primary {
+  color: $color-primary !important;
+}
+
+// Display
+
+.d-block {
+  display: block !important;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+// Font-weight
+
+strong {
+  font-weight: 700 !important;
+}
+
+// Hide @ breakpoint and below
+
+.hide-lg {
+ @include media-query('large') {
+    display: none;
+  }
+}
+.hide-md {
+ @include media-query('medium') {
+    display: none;
+  }
+}
+.hide-sm-md {
+ @include media-query('small-medium') {
+    display: none;
+  }
+}
+.hide-sm {
+ @include media-query('small') {
+    display: none;
+  }
+}
+.hide-xs {
+ @include media-query('x-small') {
+    display: none;
+  }
+}
+
+//  Image — Fluid
+
+.image-fluid {
+  height: auto;
+  max-width: 100%;
+}
+
+// Position
+
+.p-rel {
+  position: relative !important;
+}
+
+// Screen-reader only
+
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}

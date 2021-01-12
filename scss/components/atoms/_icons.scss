@@ -1,0 +1,145 @@
+.icon{
+  position: relative;
+
+  figure{
+    margin: .5em;
+    padding: 0;
+  }
+
+    &__small{
+      figure{
+      width: 24px;
+      height: 24px;
+      }
+    }
+
+    &__medium{
+      figure{
+        img{
+          width: 44px;
+          height: 44px;
+        }
+      }
+    }
+
+    &__mega{
+      figure{
+        img{
+          width: 160px;
+          height: 160px;
+
+          @include media-query('large') {
+            width: 120px;
+            height: 120px;
+          }
+
+          @include media-query('medium') {
+            width: 80px;
+            height: 80px;
+          }
+
+          @include media-query('small') {
+            width: 54px;
+            height: 54px;
+          }
+        }
+      }
+    }
+
+  &--invert{
+    filter: invert(1);
+  }
+
+  &__square{
+    width: 56px;
+    height: 56px;
+    
+    figure{
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
+
+    &::after{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      width: 56px;
+      height: 56px;
+      background-color: $color-primary;
+      border-radius: 16px;
+    }
+
+  }
+
+  &__lborder{
+
+    &::after{
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50% );
+      width: 2px;
+      height: 24px;
+      background-color: $color-primary;
+    }
+
+  }
+
+  &__pricing-include,
+  &__pricing-exclude{
+    position: relative;
+    width: 56px;
+    height: 56px;
+    
+    figure{
+      margin: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: 56px;
+      height: 56px;
+
+      img{
+        height: 24px;
+        width: 24px;
+      }
+    }
+
+    &::after{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 56px;
+      height: 56px;
+      z-index: 0;
+      opacity: .25;
+      border-radius: 15px;
+    }
+  }
+
+  &__pricing-include{
+    &::after{
+      background-color: $color-secondary;
+    }
+  }
+  &__pricing-exclude{
+    &::after{
+      background-color: $color-primary;
+    }
+  }
+}

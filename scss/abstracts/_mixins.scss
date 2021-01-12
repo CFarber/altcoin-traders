@@ -1,0 +1,70 @@
+//
+// Mixins
+//
+
+// Breakpoints
+@mixin media-query($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. " + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+// Gutters
+@function stomp($value) {
+  @return if($value, !important, null); // sass-lint:disable-line no-important
+}
+ 
+@mixin gutter($top: 0, $right: 0.5, $bottom: 0, $left: 0.5, $reset: false) {
+ 
+  $p-top: map-get($gutters, 'default') * $top;
+  $p-right: map-get($gutters, 'default') * $right;
+  $p-bottom: map-get($gutters, 'default') * $bottom;
+  $p-left: map-get($gutters, 'default') * $left;
+
+  $default-pad: $p-top $p-right $p-bottom $p-left;
+
+  padding: $default-pad stomp($reset);
+
+  $last-pad: $default-pad;
+
+  @each $point, $value in $breakpoints {
+    $p-top: map-get($gutters, $point) * $top;
+    $p-right: map-get($gutters, $point) * $right;
+    $p-bottom: map-get($gutters, $point) * $bottom;
+    $p-left: map-get($gutters, $point) * $left;
+
+    $new-pad: $p-top $p-right $p-bottom $p-left;
+
+    @if ($new-pad != $last-pad) {
+      @include media-query($point) {
+        padding: $new-pad stomp($reset);
+      }
+    }
+
+    $last-pad: $new-pad;
+  }
+}
+
+// Transition
+@mixin transition {
+  transition: .2s ease;
+}
+
+@mixin container-center {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: $grid-outer-padding;
+  padding-right: $grid-outer-padding;
+  
+  width: 100%;
+  max-width: $grid-max-width; 
+}

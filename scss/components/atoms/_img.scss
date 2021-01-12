@@ -1,0 +1,14 @@
+.img{
+  margin: 0;
+  padding: 0;
+
+  position: relative;
+}
+
+@for $i from 1 through 100 {
+  .img--shrink-#{$i} {
+    img{
+      width: percentage($i / 100);
+    }
+  }
+}

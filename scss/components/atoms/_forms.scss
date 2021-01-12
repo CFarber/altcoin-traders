@@ -1,0 +1,37 @@
+
+input[type="search"]{
+  margin: 0;
+  padding-right: .75em;
+  width: 100%;
+  max-width: 216px;
+  height: 44px;
+  line-height: 44px;
+
+  border-radius: 1.5em;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: bold;
+
+  position: relative;
+
+  background-color: transparent;
+  color: $color-lightgrey;
+  border: 2px solid $color-lightgrey;
+
+  text-indent: 1.5em;
+
+  cursor: pointer;
+  outline: 0;
+
+  @include media-query('small') {
+    max-width: unset;   
+  }
+}
+
+fieldset{
+  all: unset;
+}
