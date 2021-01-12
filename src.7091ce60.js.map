@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.js"],"names":[],"mappings":";;;;;AAEA,aAFA,QAAA,qBAEA,IAAA,EAAA,EAAA,QAAA,kBAAA,SAAA,EAAA,GAAA,OAAA,GAAA,EAAA,WAAA,EAAA,CAAA,QAAA","file":"src.7091ce60.js","sourceRoot":"../src","sourcesContent":["import './scss/index.scss';\n\nimport foo from \"/assets/*.png\";"]}
