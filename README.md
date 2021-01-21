@@ -1,1 +1,0 @@
-# altcoin-traders
