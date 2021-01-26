@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.js"],"names":["console","log"],"mappings":";;;AACA,aADA,QAAA,qBACAA,QAAQC,IAAI","file":"src.05e5f9f6.js","sourceRoot":"../src","sourcesContent":["import './scss/index.scss';\nconsole.log('404');"]}
